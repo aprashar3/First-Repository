@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iu6-il-7Zt"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLE-xA-mOS">
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUD-bP-cgc">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BoN-Aw-xAP"/>
+                                    <barButtonItem title="Next Dog" width="67" id="MfM-7d-q2p">
+                                        <connections>
+                                            <action selector="nextDogButtonPressed:" destination="BYZ-38-t0r" id="f7j-9V-auk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-gb-ohk">
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dvP-gb-ohk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9fC-il-KJg"/>
+                            <constraint firstItem="hLE-xA-mOS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AVT-uL-Nhz"/>
+                            <constraint firstItem="gUD-bP-cgc" firstAttribute="top" secondItem="hLE-xA-mOS" secondAttribute="bottom" symbolic="YES" id="CrQ-5n-c89"/>
+                            <constraint firstItem="dvP-gb-ohk" firstAttribute="width" secondItem="hLE-xA-mOS" secondAttribute="width" id="FbY-5F-rLF"/>
+                            <constraint firstItem="dvP-gb-ohk" firstAttribute="leading" secondItem="hLE-xA-mOS" secondAttribute="trailing" constant="8" symbolic="YES" id="MA1-OL-aVP"/>
+                            <constraint firstItem="iu6-il-7Zt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ntj-24-PUr"/>
+                            <constraint firstAttribute="trailing" secondItem="iu6-il-7Zt" secondAttribute="trailing" id="UAW-HP-lz8"/>
+                            <constraint firstItem="iu6-il-7Zt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VJO-6G-pP1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iu6-il-7Zt" secondAttribute="bottom" id="WSM-77-tex"/>
+                            <constraint firstItem="gUD-bP-cgc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iuV-GO-jkU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUD-bP-cgc" secondAttribute="bottom" id="knW-Ur-4O8"/>
+                            <constraint firstItem="dvP-gb-ohk" firstAttribute="baseline" secondItem="hLE-xA-mOS" secondAttribute="baseline" id="nCA-ag-MoD"/>
+                            <constraint firstAttribute="trailing" secondItem="gUD-bP-cgc" secondAttribute="trailing" id="tOB-KC-snr"/>
+                            <constraint firstItem="gUD-bP-cgc" firstAttribute="top" secondItem="dvP-gb-ohk" secondAttribute="bottom" symbolic="YES" id="y4E-mo-K3u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dogBreedLabel" destination="dvP-gb-ohk" id="ekS-Q2-H8k"/>
+                        <outlet property="dogImageView" destination="iu6-il-7Zt" id="Ezg-B3-QEr"/>
+                        <outlet property="dogNameLabel" destination="hLE-xA-mOS" id="Jbj-bp-wmE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
